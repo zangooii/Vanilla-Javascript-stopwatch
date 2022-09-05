@@ -16,15 +16,18 @@ const secondStopped = () => {
 };
 
 const resetTime = () => {
-  tMinute = 00;
-  tSecond = 00;
-  tTenMS = 00;
-  document.getElementById("time").innerHTML = "00:00:00";
+  tMinute = 0;
+  tSecond = 0;
+  tTenMS = 0;
+  changeDom("minute", '00');
+  changeDom("second", '00');
+  changeDom("hundredth", '00');
 };
 
 stopButton.addEventListener("click", secondStopped);
 startButton.addEventListener("click", secondPassed);
 resetButton.addEventListener("click", resetTime);
+
 
 const tenMSPassing = () => {
   if (tTenMS === 100) {
@@ -38,11 +41,11 @@ const tenMSPassing = () => {
   } else {
     showingSecond = showTime(tSecond);
     showingMinute = showTime(tMinute);
-    showingtTenMs = showTime(tTenMS);
+    showingtHundredth = showTime(tTenMS);
     tTenMS = tTenMS + 1;
-    document.getElementById(
-      "time"
-    ).innerHTML = `${showingMinute}:${showingSecond}:${showingtTenMs}`;
+    changeDom("minute", showingMinute);
+    changeDom("second", showingSecond);
+    changeDom("hundredth", showingtHundredth);
   }
 };
 
@@ -52,4 +55,8 @@ const showTime = (tPos) => {
   } else {
     return tPos;
   }
+};
+
+const changeDom = (elementId, presentTime) => {
+  document.getElementById(elementId).innerHTML = presentTime;
 };

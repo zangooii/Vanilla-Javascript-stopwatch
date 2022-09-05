@@ -9,7 +9,14 @@
   <body>
     <link rel="stylesheet" href="clock.css" />
     <h1 class="head">Vanilla javascript stopwatch</h1>
-    <div class="time_div"><p1 id="time">00:00:00</p1></div>
+    <div class="time_div">
+      <p1 id="time">
+        <span id="minute">00</span>:<span id="second">00</span>.<span id="hundredth"
+        style="font-size: 80px;"
+          >00</span
+        ></p1
+      >
+    </div>
     <div class="buttons">
       <button id="start">start</button>
       <button id="stop">stop</button>
