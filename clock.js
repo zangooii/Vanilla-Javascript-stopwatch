@@ -1,6 +1,6 @@
 let tMinute = 0;
 let tSecond = 0;
-let tTenMS = 0;
+let hundredth = 0;
 
 let startButton = document.getElementById("start");
 let stopButton = document.getElementById("stop");
@@ -18,7 +18,7 @@ const secondStopped = () => {
 const resetTime = () => {
   tMinute = 0;
   tSecond = 0;
-  tTenMS = 0;
+  hundredth = 0;
   changeDom("minute", '00');
   changeDom("second", '00');
   changeDom("hundredth", '00');
@@ -30,8 +30,8 @@ resetButton.addEventListener("click", resetTime);
 
 
 const tenMSPassing = () => {
-  if (tTenMS === 100) {
-    tTenMS = 0;
+  if (hundredth === 100) {
+    hundredth = 0;
     if (tSecond === 60) {
       tSecond = 0;
       tMinute = tMinute + 1;
@@ -41,8 +41,8 @@ const tenMSPassing = () => {
   } else {
     showingSecond = showTime(tSecond);
     showingMinute = showTime(tMinute);
-    showingtHundredth = showTime(tTenMS);
-    tTenMS = tTenMS + 1;
+    showingtHundredth = showTime(hundredth);
+    hundredth = hundredth + 1;
     changeDom("minute", showingMinute);
     changeDom("second", showingSecond);
     changeDom("hundredth", showingtHundredth);

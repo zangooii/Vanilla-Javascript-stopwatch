@@ -1,18 +1,34 @@
-.head {
-    text-align: center;
+body{
+  background-color: black;
+}
+
+.head1 {
+  text-align: center;
 }
 #time {
-    font-size: 200px;
+  color: gold;
+  margin: auto;
+  font-size: 250px;
 }
-.buttons {
-    font-size: 120px;
+
+.button {
+    background-color:dimgray;
+    color: gold;
+    display: inline-block;
+    width: 15%;
     text-align: center;
+    font-size: 50px;
+    height: 100px;
+}
+.div-button{
+    text-align: center;
+    font-size: 50px;
 }
 .time_div {
-    width: 1000px;
-    border: 5px solid black;
-    text-align: center;
+  padding: 10px 10px;
+  margin: auto;
+  width: 600px;
 }
-.footer{
-    color: gray;
+.footer {
+  color: gray;
 }
