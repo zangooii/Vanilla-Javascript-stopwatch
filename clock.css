@@ -1,4 +1,5 @@
 body{
+  font-family:cursive;
   background-color: black;
 }
 
@@ -8,7 +9,7 @@ body{
 #time {
   color: gold;
   margin: auto;
-  font-size: 250px;
+  font-size: 220px;
 }
 
 .button {
