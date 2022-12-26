@@ -32,7 +32,7 @@ resetButton.addEventListener("click", resetTime);
 const tenMSPassing = () => {
   if (hundredth === 100) {
     hundredth = 0;
-    if (tSecond === 60) {
+    if (tSecond === 59) {
       tSecond = 0;
       tMinute = tMinute + 1;
     } else {
